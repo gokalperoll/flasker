@@ -7,7 +7,7 @@ app = Flask(__name__)
 def index():
     stuff = "K1 <b>sex</b>"
     computer_mark = ["asus", "lenovo", "casper", "monster"]
-    return render_template('index.html',
+    return render_telsmplate('index.html',
                            stuff=stuff,
                            computer_mark=computer_mark, )
 
