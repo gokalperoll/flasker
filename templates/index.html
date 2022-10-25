@@ -2,13 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{ title }}</title>
 </head>
 <body>
-<h1>This is a index page </h1>
-<p>{{ stuff|striptags }} </p>
-{% for computerMark in computer_mark %}
-    <ul><li>{{computerMark}}</li></ul>
-{% endfor %}
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>This is a index page </h1>
+    <p>{{ stuff|striptags }} </p>
+    {% for computerMark in computer_mark %}
+    <ul>
+        <li>{{computerMark}}</li>
+    </ul>
+    {% endfor %}
+{% endblock %}
+
+
 </body>
 </html>

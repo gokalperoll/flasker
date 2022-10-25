@@ -5,11 +5,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    title="Index"
     stuff = "K1 <b>sex</b>"
     computer_mark = ["asus", "lenovo", "casper", "monster"]
-    return render_telsmplate('index.html',
+    return render_template('index.html',
                            stuff=stuff,
-                           computer_mark=computer_mark, )
+                           computer_mark=computer_mark,
+                           title=title,)
 
 
 @app.route('/user/<name>')
